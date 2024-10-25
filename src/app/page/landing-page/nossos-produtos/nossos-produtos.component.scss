@@ -1,0 +1,54 @@
+@import "../funcoes";
+@import "../variaveis";
+
+$biscoito: '../../../../assets/produtos/biscoito/biscoito.jpg';
+$salgado: '../../../../assets/produtos/salgado/salgado.jpg';
+$doce: '../../../../assets/produtos/doce/cupcake.jpeg';
+$bebida: '../../../../assets/produtos/bebidas/gelado.jpeg';
+$laticinios: '../../../../assets/produtos/laticinios/queijo.jpg';
+$pao: '../../../../assets/produtos/paes/pao_1.jpg';
+
+#nossos-produtos {
+    @include flexContent(center, center, row);
+    text-align: center;
+
+    h1{
+        color: $titulo
+    }
+    .nossos-produts-container{
+        max-width: 45%;
+
+        .nossos-profutos-contain {
+            @include flexContent(center, center, row);
+            gap: 2rem 5rem;
+            flex-wrap: wrap;
+    
+            .item {
+                width: 148px;
+                height: 140px;
+                background-color: peru;
+                border-radius: 72px;
+                margin-bottom: 1rem;
+            }
+            
+            .biscoito{
+                @include backgroundImage($biscoito);
+            }
+            .laticinios{
+                @include backgroundImage($laticinios);
+            }
+            .pao{
+                @include backgroundImage($pao);
+            }
+            .salgado{
+                @include backgroundImage($salgado);
+            }
+            .doce{
+                @include backgroundImage($doce);
+            }
+            .bebida{
+                @include backgroundImage($bebida);
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "../funcoes";
+@import "../variaveis";
+
+$imagem: '../../../../assets/lading_page/backgrond_pao.jpg';
+
+
+.content-hero{
+    @include flexContent(center, center, column);
+    position: relative;
+
+    .hero-barckground{
+        @include backgroundImage($imagem);
+        width: 100%;
+        height: 65vh;
+        filter: blur(2px);
+    }
+    .overflow{
+        background-color: rgba(0, 0, 0, 0.161);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    .titulo{
+        color: $white;
+        position: absolute;
+        z-index: 2;
+        h1{
+            font-size: 5rem;
+            font-weight: 600;
+        }
+        p{
+            font-weight: 600;
+            font-size: 1.3rem;
+            line-height: 0;
+            margin-left: 6px;
+        }
+    }
+}
+

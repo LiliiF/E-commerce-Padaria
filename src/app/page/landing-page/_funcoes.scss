@@ -1,0 +1,13 @@
+@mixin flexContent($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin backgroundImage($caminhoImg){
+    background-image: url($caminhoImg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
