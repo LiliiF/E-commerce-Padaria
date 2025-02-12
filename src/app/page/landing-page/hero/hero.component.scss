@@ -12,14 +12,10 @@ $imagem: '../../../../assets/lading_page/backgrond_pao.jpg';
         @include backgroundImage($imagem);
         width: 100%;
         height: 65vh;
-        filter: blur(2px);
+        filter: blur(1px);
     }
-    .overflow{
-        background-color: rgba(0, 0, 0, 0.161);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
+    .overlay{
+        @include overlay();
     }
     .titulo{
         color: $white;

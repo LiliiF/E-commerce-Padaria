@@ -1,0 +1,32 @@
+@import '../funcoes';
+@import "../variaveis";
+
+$img: '../../../../assets/lading_page/background_pao-2.png';
+
+.cartoes-container{
+    @include flexContent(center, center, column);
+    position: relative;
+
+    .background{
+        @include backgroundImage($img);
+        width: 100%;
+        height: 40vh
+    }
+    .overlay{
+        @include overlay();
+        background-color: rgba(0, 0, 0, 0.304);
+    }
+    .cartoes-contain{
+        @include flexContent(center, center, column);
+        color: $white;
+        position: absolute;
+        z-index: 2;
+        h2{
+            font-weight: 600
+        }
+    }
+    .cartoes-icon{
+        @include flexContent(center, center, row);
+        gap: 25px;
+    }
+}

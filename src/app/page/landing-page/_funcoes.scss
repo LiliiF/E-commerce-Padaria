@@ -1,13 +1,21 @@
-@mixin flexContent($justify, $align, $direction){
+@mixin flexContent($justify, $align, $direction) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
 }
 
-@mixin backgroundImage($caminhoImg){
+@mixin backgroundImage($caminhoImg) {
     background-image: url($caminhoImg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+@mixin overlay() {
+    background-color: rgba(0, 0, 0, 0.157);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
 }
